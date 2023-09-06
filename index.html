@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Formulário</title>
+
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <h1>Avalie a sua mentoria</h1>
+      <p>Chegou a hora de avaliar o seu mentor. Bora lá?</p>
+
+      <img src="elements/3-stars-baloon.svg" alt="Balão vermelho com 3 de 5 estrelas preenchidas.">
+    </header>
+
+    <form action="">
+      <div class="forms">
+
+        <fieldset>
+          <legend class="formHeader">Informações pessoais</legend>
+
+          <div class="double-column">
+            <div class="field">
+              <label for="name">Nome</label>
+              <input id="name" name="name" type="text">
+            </div>
+
+            <div class="field">
+              <label for="surName">Sobrenome</label>
+              <input id="surName" name="surName" type="text">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">Email <small>(digite um email válido)</small></label>
+            <input id="email" name="email" type="email">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Informações do mentor</legend>
+
+          <div class="field half">
+            <label for="masterName">Selecione quem foi o seu mentor</label>
+            <select name="masterName" id="masterName">
+              <option value=""></option>
+              <option value="rodrigo">Rodrigo</option>
+              <option value="fernando">Fernando</option>
+            </select>
+          </div>
+
+          <div class="field textarea">
+            <label for="feedback">Feedback sobre o mentor</label>
+            <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea>
+          </div>
+
+          <div class="checkbox">
+            <input type="checkbox" name="checkbox" id="checkbox" class="hidden-checkbox">
+            <label for="checkbox" class="label-container">
+              <svg xmlns="http://www.w3.org/2000/svg" class="checkbox-svg" width="26" height="26" viewBox="0 0 26 26"
+                fill="none">
+                <path
+                  d="M1 9C1 4.58172 4.58172 1 9 1H17C21.4183 1 25 4.58172 25 9V16.798C25 21.2163 21.4183 24.798 17 24.798H9C4.58172 24.798 1 21.2163 1 16.798V9Z"
+                  fill="#FAFAFC" stroke="#E6E6F0">
+              </svg>
+              Todas as minhas dúvidas foram esclarecidas durante a mentoria.
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Agendando próxima mentoria</legend>
+
+          <div class="double-column">
+            <div class="field">
+              <label for="date">Data <small>(DD/MM/AAAA)</small></label>
+              <input id="date" name="date" type="date">
+            </div>
+
+            <div class="timeFields">
+              <div class="field">
+                <label for="start">Das</label>
+                <input id="start" name="start" type="time">
+              </div>
+
+              <div class="field">
+                <label for="end">Até</label>
+                <input id="end" name="end" type="time">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <button type="submit">Salvar</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
